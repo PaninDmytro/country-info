@@ -28,7 +28,7 @@ Then, install the necessary dependencies using npm:
 
 npm install
 
-2. Run the Application
+### 2. Run the Application
 To start the development server, use the following command:
 
 npm start
