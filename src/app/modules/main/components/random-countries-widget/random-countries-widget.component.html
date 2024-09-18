@@ -1,0 +1,4 @@
+<div *ngFor="let countryHoliday of (countryHolidays$ | async)" class="holiday-container">
+  <p class="country-name">Country: {{ countryHoliday.country }}</p>
+  <p class="holiday-name">Holiday: {{ countryHoliday.holiday?.localName }} ({{ countryHoliday.holiday?.date }})</p>
+</div>

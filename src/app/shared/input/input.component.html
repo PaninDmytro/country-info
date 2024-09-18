@@ -1,0 +1,12 @@
+<div
+  class="input-wrapper"
+  [class.input-focused]="focused"
+>
+  <input
+    class="input"
+    [type]="type"
+    [placeholder]="placeholder"
+    [value]="value"
+    (input)="onInputChange($event)"
+  >
+</div>

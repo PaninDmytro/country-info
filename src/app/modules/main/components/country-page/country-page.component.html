@@ -1,0 +1,21 @@
+<div class="country-holidays">
+  <h2>Holidays for {{ (holidays$ | async)?.[0]?.countryCode }} in {{ selectedYear }}</h2>
+
+  <div class="year-switcher">
+    <button class="year-button" *ngFor="let year of years; trackBy: trackByYear" (click)="onYearChange(year)">
+      {{ year }}
+    </button>
+  </div>
+
+  <ul *ngIf="holidays$ | async as holidays; else loading">
+    <li *ngFor="let holiday of holidays" class="holiday-item">
+      <h3>{{ holiday.localName }}</h3>
+      <p>Date: {{ holiday.date | date: 'fullDate' }}</p>
+      <p>Type: {{ holiday.types.join(', ') }}</p>
+    </li>
+  </ul>
+
+  <ng-template #loading>
+    <p>Loading holidays...</p>
+  </ng-template>
+</div>

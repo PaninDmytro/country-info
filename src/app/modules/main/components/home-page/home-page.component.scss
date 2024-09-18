@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  margin: auto;
+}
+
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.country-item {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.country-item:hover {
+  background-color: #e0e0e0;
+}

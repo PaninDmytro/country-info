@@ -1,0 +1,20 @@
+<form [formGroup]="searchForm" class="search-form">
+  <app-input
+    formControlName="search"
+    placeholder="Search country"
+    type="text"
+    class="search-input"
+  ></app-input>
+</form>
+
+<div class="country-list">
+  <p
+    *ngFor="let country of (searchCountries$ | async)"
+    [routerLink]="['/main', 'country-page', country.countryCode]"
+    class="country-item"
+  >
+    {{ country.name }}
+  </p>
+</div>
+
+<app-random-countries-widget></app-random-countries-widget>
